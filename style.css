@@ -1,0 +1,52 @@
+.blur-button{
+    transition: 1s;
+    border-radius: 15px;
+    border: 1.5px solid white;
+    background: transparent;
+    position: relative;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 250px;
+    width: 250px;
+    height: 100px;
+    font-size: 2rem;
+    backdrop-filter: blur(10px);
+}
+.blur-button::before{
+    content:"";
+    z-index: -1;
+    border-radius: 10px;
+    position: absolute;
+    overflow: auto;
+    top: -0px;
+    left: -0px;
+    width: 0px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    transition: 1s;
+
+}
+.blur-button:hover::before{
+    backdrop-filter: blur(0px);
+    width: 250px;
+    border-radius: 60px;
+
+
+}
+.blur-button:hover{
+    border-radius: 60px;
+    backdrop-filter: blur(0px);
+    transform: scale(1.2);
+    color: rgb(65, 124, 253);
+
+}
+body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url(sea.jpg);
+    background-size: 1400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
